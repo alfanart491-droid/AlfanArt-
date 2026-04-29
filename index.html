@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Gambar Realis Profesional</title>
+    <style>
+        /* CSS Reset & Basic Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fcfcfc;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37; /* Gold accent */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: #d4af37;
+            color: #1a1a1a;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b5952f;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #d4af37;
+            margin: 10px auto 0;
+        }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            aspect-ratio: 1/1;
+            background-color: #eee;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Pricing */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .pricing-card ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .pricing-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Alfan rt.</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#layanan">Layanan & Harga</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Abadikan Momen Anda</h1>
+        <p>Jasa gambar realis profesional. Kami mengubah foto kenangan Anda menjadi karya seni buatan tangan yang bernilai tinggi dan abadi.</p>
+        <!-- Ganti nomor WhatsApp di bawah ini dengan nomor Anda -->
+        <a href="https://wa.me/6282310164576?text=Halo,%20saya%20ingin%20memesan%20jasa%20gambar%20realis." class="btn" target="_blank">Pesan Sekarang</a>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-title">Karya Kami</h2>
+        <div class="portfolio-grid">
+            <!-- Ganti src="..." dengan link gambar portofolio Anda sendiri -->
+            <div class="portfolio-item"><img src="gambar 1.jpg"></div>
+            
+            <div class="portfolio-item"><img src="gambar2.jpg" alt="Gambar Realis 2"></div>
+            
+            <div class="portfolio-item"><img src="gambar 3.jpg" alt="Gambar Realis 3"></div>
+            
+            <div class="portfolio-item"><img src="gambar 4.jpg" alt="Gambar Realis 4"></div>
+            
+            <div class="portfolio-item"><img src="gambar 5.jpg" alt="Gambar Realis 5"></div>
+            
+            <div class="portfolio-item"><img src="gambar 6.jpg" alt="Gambar Realis 6"></div>
+        </div>
+    </section>
+
+    <section id="layanan">
+        <h2 class="section-title">Paket Layanan</h2>
+        <div class="pricing-container">
+            
+            <div class="pricing-card">
+                <h3>Sketsa Pensil (A5)</h3>
+                <div class="price">Rp 50.000</div>
+                <ul>
+                    <li>1 Wajah (Hitam Putih)</li>
+                    <li>Kertas Sketchbook 180 gsm</li>
+                    <li>Pensil Grafit Berkualitas</li>
+                    <li>Pengerjaan 1-2 Hari</li>
+                    <li>Softfile & Hardcopy</li>
+                </ul>
+                <a href="https://wa.me/6282310164576?text=Halo,%20saya%20pesan%20Sketsa%20Pensil%20A4" class="btn" target="_blank">Pilih Paket</a>
+            </div>
+
+             <div class="pricing-card">
+                <h3>Sketsa Pensil (A4)</h3>
+                <div class="price">Rp 100.000</div>
+                <ul>
+                    <li>1 Wajah (Hitam Putih)</li>
+                    <li>Kertas Sketchbook 180 gsm</li>
+                    <li>Pensil Grafit Berkualitas</li>
+                    <li>Pengerjaan 2-3 Hari</li>
+                    <li>Softfile & Hardcopy</li>
+                </ul>
+                <a href="https://wa.me/6282310164576?text=Halo,%20saya%20pesan%20Sketsa%20Pensil%20A4" class="btn" target="_blank">Pilih Paket</a>
+            </div>
+
+             <div class="pricing-card">
+     <h3>Sketsa Pensil (A3)</h3>
+     <div class="price">Rp 150.000</div>
+     <ul>
+         <li>1 Wajah (Hitam Putih)</li>
+         <li>Kertas Sketchbook 180 gsm</li>
+         <li>Pensil Grafit Berkualitas</li>
+         <li>Pengerjaan 3-5 Hari</li>
+         <li>Softfile & Hardcopy</li>
+     </ul>
+     <a href="https://wa.me/6282310164576?text=Halo,%20saya%20pesan%20Sketsa%20Pensil%20A4" class="btn" target="_blank">Pilih Paket</a>
+ </div>
+
+        </div>
+    </section>
+
+    <section id="kontak" style="background-color: #f0f0f0;">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">Punya pertanyaan khusus atau ukuran custom? Jangan ragu untuk berdiskusi dengan kami secara langsung melalui WhatsApp.</p>
+            <a href="https://wa.me/6281234567890" class="btn" style="display: inline-block; padding: 15px 40px;" target="_blank">Chat via WhatsApp</a>
+            <p style="margin-top: 20px;">Email: alfanart491@gmail.com | Instagram: @ripkialpan</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Real Art. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+  </html>
